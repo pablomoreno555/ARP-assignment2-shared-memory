@@ -26,10 +26,10 @@ Apart from the *compile.sh* and *run.sh* files, the repository is organized as f
 ## Project Description
 The project consists is the design and development of an interactive simulator of a simplified vision system, able to track an object in a 2-D plane. It requires the use of a shared memory in which two processes operate simultaneously:
 
-- **ProcessA**. It simulates a video-camera, creating a moving image using an ncurses window. Using the arrow keys, the user will move a circle in the window, producing an image in the simulated, shared, video memory. Additionally, when the user presses the button in the ncurses window, a snapshot of the image in the shared memory will be saved in a .bmp file.
+- **ProcessA**. It simulates a video-camera, creating a moving image using an ncurses window. Using the arrow keys, the user will move a circle in the window, producing an image in the simulated, shared, video memory. Additionally, when the user presses the button in the ncurses window, a snapshot of the image will be saved in a .bmp file.
 - **ProcessB**. It simulates the extraction of the center of the circle from the acquired moving image. Also, it will show the position trace of the center of the circle in a second ncurses window.
 
-On the other hand, the **Master** process is in charge of spawning the previous two processes. In addition to the ncurses library, it will also be used the libbitmap library, in order to work with the dynamic bitmap data structure.
+On the other hand, the **Master** process is in charge of spawning the previous two processes.
 
 
 ## User Guide
